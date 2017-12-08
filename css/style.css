@@ -1,0 +1,181 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body #modal {
+    background: rgba(10, 10, 10, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+body #modal #modal-content {
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 5% 25px;
+    width: 420px;
+    max-width: 100%;
+    position: relative;
+}
+
+body #modal #modal-content a {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+body #modal #modal-content .splitter {
+    height: 2px;
+    background: lightgray;
+    margin: 15px 0;
+}
+
+body #modal #modal-content img {
+    width: 140px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+body #modal #modal-content h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+body #modal #modal-content h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+body #modal #modal-content h3:not(.employee-email),
+body #modal #modal-content .employee-address-street {
+    text-transform: capitalize;
+}
+
+body #app {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+    body #app {
+        padding: 0 10%;
+    }
+}
+
+body #app nav {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+body #app nav h1 {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(99, 99, 99);
+    font-weight: bold;
+}
+
+body #app #employees {
+    padding: 0 15px;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+}
+
+body #app #employees .employee-wrapper {
+    padding: 20px;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+@media (max-width: 1350px) {
+    body #app #employees .employee-wrapper {
+        width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 930px) {
+    body #app #employees .employee-wrapper {
+        width: 100%;
+    }
+}
+
+body #app #employees .employee-wrapper .employee {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color .2s ease-in-out;
+}
+
+body #app #employees .employee-wrapper .employee:hover {
+    border-color: rgb(58, 230, 58);
+}
+
+body #app #employees .employee-wrapper .employee img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+body #app #employees .employee-wrapper .employee .employee-details {
+    flex-grow: 1;
+    /*padding: 20px;*/
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+body #app #employees .employee-wrapper .employee .employee-details h1,
+body #app #employees .employee-wrapper .employee .employee-details h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body #app #employees .employee-wrapper .employee .employee-details *:not(.employee-email) {
+    text-transform: capitalize;
+}
+
+body #app #employees .employee-wrapper .employee .employee-details h1 {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin: 15px 0;
+}
+
+body #app #employees .employee-wrapper .employee .employee-details h3 {
+    font-weight: 300;
+    font-size: 14px;
+    color: darkgray;
+    margin: 15px 0;
+}
